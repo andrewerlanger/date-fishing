@@ -1,0 +1,88 @@
+<div class="experiencesContainer" data-step="1" id="mainContainerForm">
+  <div class="formSliderContainer" id="slider-new-experience">
+
+    <div class="formContainer">
+      <div class="create-form-flexbox">
+        <i class="fas fa-angle-left left-side-arrow arrow-hide"></i>
+        <div class="upper-form">
+          <div class="form-group">
+            <i class='fas fa-heart'></i>
+            <i class="far fa-heart"></i>
+           <i class="far fa-heart"></i>
+            <h3>Name your date</h3>
+            <input type="text" placeholder="Knitting a scarf for winter" id="input-1">
+          </div>
+          <div class="form-group">
+            <h3>Select a category</h3>
+            <div class="categories-container">
+
+              <select id="input-2">
+                <option id="intro-select">Select One</option>
+              <% Experience::CATEGORIES.each do |category| %>
+                <option id="selected-item" value="<%=category%>"><%=category%></option>
+              <% end %>
+              </select>
+
+            </div>
+          </div>
+        </div>
+        <!-- div class="button-container-form"> -->
+          <!-- <div class="btn btn-primary muted"><</div> -->
+          <i class="fas fa-angle-right right-side-arrow" id="new-date-1"></i>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="formContainer">
+      <div class="create-form-flexbox">
+          <i class="fas fa-angle-left left-side-arrow" id="new-date-2-back"></i>
+        <div class="upper-form">
+          <div class="form-group">
+            <i class='fas fa-heart'></i>
+            <i class='fas fa-heart'></i>
+           <i class="far fa-heart"></i>
+            <h3>Upload a gorgeous photo</h3>
+            <div class="create-form-image-flexbox">
+              <div class="btn btn-primary btn-special-photo" id="photos-button">+</div>
+              <div id="photo-file-name"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>Add a short description</h3>
+          <input type="text" placeholder="Winter is coming. Let’s knit together!" id="input-3">
+          </div>
+        </div>
+
+          <i class="fas fa-angle-right right-side-arrow" id="new-date-2"></i>
+      </div>
+    </div>
+
+    <div class="formContainer">
+      <div class="create-form-flexbox">
+            <i class="fas fa-angle-left left-side-arrow" id="new-date-3-back"></i>
+        <div class="upper-form">
+          <div class="form-group">
+            <i class='fas fa-heart'></i>
+            <i class='fas fa-heart'></i>
+            <i class='fas fa-heart'></i>
+            <h3>Pick a date</h3>
+            <input placeholder="December 24, 2018" id="test-1" class="test-1 form-control string optional datepickr flatpickr-input input active" type="text">
+          </div>
+          <div class="form-group">
+            <h3>Pick a location</h3>
+            <input placeholder="Kreuzberg, Berlin" class="form-control string optional ap-input" type="text" name="experience[location]" id="input-4" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-expanded="false" aria-owns="algolia-places-listbox-0" dir="auto" style="position: relative; vertical-align:top;">
+            <div class="flexbox-gofish-button">
+              <div class="btn btn-primary" id="submit-experience-button">Go Fish!</div>
+            </div>
+          </div>
+        </div>
+        <i class="fas fa-angle-right right-side-arrow arrow-hide"></i>
+
+            <div id="new-date-3"></div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="btn btn-primary" id="submit-experience-back">Back</div>
+
+

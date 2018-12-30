@@ -1,0 +1,46 @@
+.profile-page {
+  display: flex;
+  position: relative;
+}
+
+.all-tabs {
+  height: calc(100vh - 70px);
+  width: 100%;
+  // position: fixed;
+}
+
+.tab-item {
+  border-top: white 1px solid;
+  height: 25%;
+  width: 100%;
+  background: $black;
+  color: white;
+}
+
+.top-tab {
+  border-top: none;
+}
+
+.active {
+  color: $red;
+}
+
+.hidden {
+  display: none;
+}
+
+.displayed {
+  display: block;
+}
+
+.container-profile-pages {
+  width: calc(100vw - 60px);
+}
+
+.tab-content {
+  color: $white;
+  p {
+    color: $white;
+    opacity: 0.85;
+  }
+}

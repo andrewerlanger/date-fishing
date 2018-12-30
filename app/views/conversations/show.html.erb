@@ -1,0 +1,67 @@
+<div class="all-message-content">
+
+<div class="container">
+  <div class="row flexbox-horizontal">
+    <div class="col-sm-8">
+
+      <% who = @conversation.nibble.interested == current_user ? @conversation.nibble.owner : @conversation.nibble.interested %>
+
+      <div class="flexbox-vertical" style="margin:20px;">
+      <!-- FROM HERE -->
+      <div class="chat-header"><h4><%= @conversation.nibble.experience.title %> | <%= who.full_name %></h4></div>
+      <div class="show-messages">
+        <% @conversation.messages.sorted.each do |message| %>
+          <%= render "messages/message", message: message, user_is_messages_author: message.sender == current_user %>
+        <% end %>
+      </div>
+      <div id="create-message">
+        <%= simple_form_for [@conversation, Message.new], url: new_message_path(@conversation), remote: true, html: {autocomplete: "off" } do |f| %>
+          <%= f.input :sender_id, input_html: { value: current_user.id }, as: :hidden %>
+          <%= f.input :body, label: false %>
+          <%= f.submit "Send", class: 'btn btn-primary pull-right' %>
+        <% end %>
+        <div class="back-status-buttons">
+          <%= link_to inbox_path do %>
+            <i class="fas fa-chevron-left"></i> Back
+          <% end %>
+          <% if policy(@conversation.nibble).update? && @conversation.nibble.status == 'pending' %>
+            <div class="accepted-declined">
+              <%= link_to '', experience_nibble_path(@conversation.nibble.experience, @conversation.nibble, status: 'declined'),
+              method: :patch, class: 'fas fa-times-circle', style: "color: #9B2E2E;margin: 0 10px;" %>
+              <%= link_to '', experience_nibble_path(@conversation.nibble.experience, @conversation.nibble, status: 'accepted'),
+              method: :patch, class: 'fas fa-check-circle', style: "color: #2E996E;" %>
+            </div>
+          <% else %>
+            <p class="status <%= @conversation.nibble.status %>" id="status_<%= @conversation.nibble.id %> ">
+              <%= @conversation.nibble.status.capitalize %>
+            </p>
+          <% end %>
+          <div class="just"></div>
+        </div>
+      </div>
+      <!-- TO HERE -->
+      </div>
+        <%#= render 'shared/date-modal' %>
+
+    </div>
+  </div>
+</div>
+<% content_for :after_js do %>
+  <script>
+    scrollLastMessageIntoView();
+    App['conversation_<%= @conversation.id %>'] = App.cable.subscriptions.create(
+      { channel: 'ConversationsChannel', conversation_id: <%= @conversation.id %> }, {
+        received: (data) => {
+          if (data.current_user_id !== <%= current_user.id %>) {
+            messagesContainer = document.querySelector('.show-messages');
+            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+            scrollLastMessageIntoView();
+          }
+        }
+      }
+    )
+    document.querySelector('html').scrollTop = 0;
+  </script>
+<% end %>
+
+</div>

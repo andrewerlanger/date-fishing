@@ -1,0 +1,57 @@
+<!-- <style>
+  .mapboxgl-canvas{
+    height: 300px !important;
+    width:390px !important;
+  }
+  .mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate{
+    height: 300px !important;
+    width:390px !important;
+  }
+  .modal-dialog.location-modal-dialog{
+    height: 300px !important;
+    width: 390px !important;
+    background-color: transparent;
+  }
+  .modal-content{
+    background-color: transparent;
+    display: flex;justify-content: center; flex-direction: column; align-items: center;
+  }
+  .newdata{
+    height: 100px;
+    width: 390px;
+    background: white;
+    padding: 20px;
+    color: $text !important;
+  }
+
+  .location-date {
+    padding-top: 10px;
+    color: $text !important;
+  }
+
+  .location-address {
+    color: $text !important;
+    font-weight: bold;
+
+  }
+
+</style> -->
+<div id="mapmapmap">
+<div class="modal fade" id="map-modal" role="dialog">
+  <div class="modal-dialog location-modal-dialog">
+    <div class="modal-content modal-padding modal-background">
+      <div id="map" style="width: 390px; height: 300px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+      </div>
+      <div class="newdata">
+        <div class="location-address"><%= @experience.location %></div>
+      <div class="location-date"><%= @experience.humanize_date %></div>
+      <button data-dismiss="modal" class="close user-x-button">×</button>
+    </div>
+    </div>
+
+  </div>
+</div>
+</div>

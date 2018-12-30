@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>We're sorry, but something went wrong (500)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+  <style>
+
+  .rails-default-error-page {
+    color: #0FFF95;
+    margin: 0;
+    font-family: 'Share Tech Mono', 'monospace';
+    text-align: center;
+    margin: 0;
+    text-decoration: none !important;
+  }
+
+  .rails-default-error-page div.banner {
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .rails-default-error-page div.banner-content {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px;
+  }
+
+  .rails-default-error-page .btn-error {
+    background: #2E996E;
+    border-radius: 0.1875rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    width: 12.5rem;
+    text-align: center;
+    letter-spacing: 0.125rem;
+    font-size: 24px;
+
+  }
+
+  .rails-default-error-page .btn-error:hover {
+    background-color: #9B2E2E;
+    cursor: pointer;
+  }
+
+  .btn-error:active {
+    background-color: #dd5754;
+  }
+
+  </style>
+</head>
+
+<body class="rails-default-error-page">
+  <!-- This file lives in public/500.html -->
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(150,150,150,0.6) 0%, rgba(36,36,36,0.6) 50%), url('https://res.cloudinary.com/dcjfhbk0f/image/upload/v1544095213/aquarium-child-close-up-731141.jpg');">
+  <div class="banner-content">
+    <div class="warning">
+      <img src="https://res.cloudinary.com/dcjfhbk0f/image/upload/v1544104692/500.png" alt="500">
+    </div>
+    <h1>We're sorry, but something went wrong</h1>
+    <h3>There is an error in our system.</h3>
+    <div class="btn-container">
+      <a href="/experiences" class="btn-error">Return to Dates</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+

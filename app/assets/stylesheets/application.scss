@@ -1,0 +1,24 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+@import "config/focus";
+@import "config/text-selection";
+@import "config/default_config";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";
+
+// Specific Pages
+@import "experiences/index";
+@import "experiences/show";
+@import "experiences/new";
+@import "experiences/false-forms"

@@ -1,0 +1,118 @@
+// This is where you override default Bootstrap variables
+// 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
+// 3. You can override them below!
+
+// General style
+$font-family-sans-serif:  $body-font;
+$headings-font-family:    $headers-font;
+$body-bg:                 $black;
+$font-size-base: 18px;
+
+// Colors
+$gray-base:       $black;
+$brand-primary:   $red;
+$brand-success:   $green;
+$brand-info:      $green;
+$brand-danger:    $red;
+$brand-warning:   $black;
+
+// Buttons & inputs' radius
+$border-radius-base:  4px;
+$border-radius-large: 4px;
+$border-radius-small: 4px;
+
+
+// Patch to make simple_form compatible with bootstrap 3
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: $red;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.custom-select.is-invalid {
+  border-color: $red;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-tooltip,
+.form-control.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip,
+.was-validated .custom-select:invalid ~ .invalid-feedback,
+.was-validated .custom-select:invalid ~ .invalid-tooltip,
+.custom-select.is-invalid ~ .invalid-feedback,
+.custom-select.is-invalid ~ .invalid-tooltip {
+  display: block;
+}
+
+// Override other variables below!
+* {
+  text-decoration: none !important;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+a {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+}
+
+body {
+  color: $white;
+  background: $black;
+}
+
+button {
+  border: none;
+}
+
+i {
+  color: $red;
+}
+
+h1, h2, h3, p {
+  color: $text;
+}
+
+input.form-control {
+  &:focus {
+    outline: none;
+    border: 1px solid $red !important;
+    box-shadow: none;
+    color: $text;
+  }
+}
+
+.simple-form {
+  color: $text;
+}
+
+.btn {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+}
+
+.alert {
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.alert-warning {
+  border-color: blue;
+}
+
+

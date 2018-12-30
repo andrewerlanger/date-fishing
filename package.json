@@ -1,0 +1,21 @@
+{
+  "name": "date-fishing",
+  "private": true,
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^2.3.0",
+    "@rails/webpacker": "3.5",
+    "bootstrap": "3",
+    "flatpickr": "^4.5.2",
+    "flickity": "^2.1.2",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.3.1",
+    "lottie-web": "^5.4.2",
+    "mapbox-gl": "^0.51.0",
+    "mapbox-gl-circle": "^1.6.5",
+    "masonry-layout": "^4.2.2",
+    "places.js": "^1.14.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.10"
+  }
+}

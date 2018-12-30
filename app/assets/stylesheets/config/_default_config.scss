@@ -1,0 +1,98 @@
+.link-item {
+  font-weight: normal;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  // color: $text;
+  opacity: 0.7;
+  letter-spacing: 1.1px;
+  transform: scale(1);
+  font-size: 14px;
+  &:hover {
+    color: $red;
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.03, 1.03);
+  }
+}
+
+.body-text {
+  color: $text;
+}
+
+.primary-color {
+  color: $red;
+}
+
+.flexbox-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-horizontal-align-top {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.flexbox-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+
+.flexbox-left-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.div-margin {
+  margin: 20px auto;
+}
+
+.div-margin-large {
+  margin: 50px auto;
+}
+
+.div-padding {
+  padding: 20px;
+}
+
+.item-padding {
+  padding: 5px 10px;
+}
+
+.item-margin {
+  margin: 0 10px;
+}
+
+.red-background {
+  background: $red;
+  color: white;
+}
+
+.white-background {
+  background: white;
+  color: $black;
+}
+
+.min-div-height {
+  min-height: 300px;
+}
+
+.min-page-height {
+  min-height: calc(100vh - 120px);
+  background: $black;
+  // display: flex;
+  // justify-content: center;
+}

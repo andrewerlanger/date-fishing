@@ -1,0 +1,24 @@
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+
+
+@font-face {
+  font-family: "Gilroy Regular";
+  src: font-url('Gilroy-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: "Gilroy Thin";
+  src: font-url('Gilroy-Thin.otf') format('truetype');
+}
+
+@font-face {
+  font-family: "Gilroy SemiBold";
+  src: font-url('Gilroy-SemiBold.otf') format('truetype');
+}
+
+// Define fonts for body and headers
+$body-font: "Gilroy Regular";
+$headers-font: "Gilroy SemiBold";
+$subheaders-font: "Gilroy Thin";
+
